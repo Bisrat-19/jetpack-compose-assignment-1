@@ -1,4 +1,7 @@
 package com.example.first.ui.components
+import androidx.compose.ui.tooling.preview.Preview
+import com.example.first.ui.theme.FirstTheme
+
 
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.clickable
@@ -58,4 +61,19 @@ fun CourseCard(course: Course, modifier: Modifier = Modifier) {
     }
 }
 
+@Preview(showBackground = true)
+@Composable
+fun CourseCardPreview() {
+    FirstTheme {
+        CourseCard(
+            course = Course(
+                title = "Intro to AI",
+                code = "CS420",
+                creditHours = 3,
+                description = "Learn the basics of Artificial Intelligence.",
+                prerequisites = "CS201"
+            )
+        )
+    }
+}
 
